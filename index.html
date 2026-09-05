@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Job Nexia Privacy Policy</title>
-<meta name="description" content="Privacy policy for Job Nexia, a construction estimating app that runs entirely on-device with no ads, no account, and no network access.">
+<meta name="description" content="Privacy policy for Job Nexia, a construction estimating app that runs primarily on-device with no ads, no account, and no analytics — network access is limited to features you explicitly use.">
 <style>
   :root {
     color-scheme: light dark;
@@ -101,9 +101,11 @@
   <p>
     Job Nexia ("the app") is a construction estimating and project-takeoff
     tool published by <strong>Lee Dell Bay Innovations LLC</strong>
-    ("we", "us"). The app is paid, has no ads, no user account, and does
-    not connect to the internet at all — everything described below
-    reflects that.
+    ("we", "us"). The app is paid and has no ads, no user account, no
+    backend server, and no analytics or telemetry. It is not fully
+    offline, though: two specific, user-initiated features reach the
+    network, described in full in Section 4 below — everything else
+    described in this policy reflects an app that runs entirely on-device.
   </p>
 
   <h2 id="collects">1. Information the app collects</h2>
@@ -113,7 +115,8 @@
     <li>Structure dimensions and openings you enter for a project's materials/cut-list takeoff.</li>
     <li>Bids, invoices, expenses, and income entries you create, including amounts, descriptions, and dates.</li>
     <li>Price-book entries: item descriptions, units, costs, dates, and optional supplier names you enter.</li>
-    <li>Photos you choose to take with the device camera and attach to an expense, income entry, or price-book item.</li>
+    <li>Photos, screenshots, PDFs, spreadsheets, links, and notes you choose to attach to a bid, invoice, expense, income entry, or price-book item.</li>
+    <li>A store item's URL, when you choose to paste one so the app can try to read its title and price automatically (see Section 4).</li>
   </ul>
   <p>
     The app does not ask for your name, email address, or any account —
@@ -131,11 +134,35 @@
     Not applicable. The app shows no advertising, personalised or otherwise.
   </p>
 
-  <h2 id="identifiers">4. Device identifiers, IP address, approximate location, and diagnostic data</h2>
+  <h2 id="identifiers">4. Network access, device identifiers, and diagnostic data</h2>
   <p>
-    The app makes no network requests of any kind, so it does not transmit
-    an advertising identifier, IP address, location, or diagnostic data
-    anywhere. It does not use analytics or crash-reporting services.
+    The app does not use analytics, crash-reporting, or advertising
+    services, and does not transmit an advertising identifier, your
+    location, or diagnostic data anywhere. Two specific features do reach
+    the network, only when you use them:
+  </p>
+  <ul>
+    <li>
+      <strong>Store link lookup:</strong> if you paste a store item's URL
+      into a bid line item, the app requests that exact page directly from
+      the store's own website, to try to read its title and price
+      automatically. The store (and any network it uses, such as a CDN)
+      receives this request the same way it would from your device's web
+      browser; the request carries none of your project, bid, invoice,
+      expense, income, or price-book data.
+    </li>
+    <li>
+      <strong>On-device text recognition (OCR):</strong> photographing a
+      receipt or price tag is read using Google's ML Kit text-recognition
+      library, which runs on your device. The first time this feature is
+      used, your device may download a small recognition-model file from
+      Google's servers; after that, recognition runs entirely on-device
+      with no further network access. No photo, receipt, or app data is
+      ever sent to Google or anyone else as part of this.
+    </li>
+  </ul>
+  <p>
+    Outside of those two cases, the app makes no network requests.
   </p>
 
   <h2 id="how-used">5. How information is used</h2>
@@ -148,13 +175,15 @@
 
   <h2 id="sharing">6. Service providers and third-party sharing</h2>
   <p>
-    We do not share, sell, or transmit your data to any third party,
-    because the app has no server component and includes no third-party
-    data-processing SDK. The one exception is entirely under your control:
-    when you tap "Export PDF," the app hands a generated PDF file to your
-    device's own share sheet, and it goes only to whatever app or contact
-    you personally choose there (for example, Mail, Messages, or Drive).
+    We do not share, sell, or transmit your data to any third party — the
+    app has no server component of our own. The exceptions are all
+    entirely under your control:
   </p>
+  <ul>
+    <li>When you export a PDF or spreadsheet, the app hands that file to your device's own share sheet, and it goes only to whatever app or contact you personally choose there (for example, Mail, Messages, or Drive).</li>
+    <li>When you paste a store item's URL, that URL (and nothing else) is requested directly from the store's own website — see Section 4.</li>
+    <li>When you photograph a receipt or price tag, on-device text recognition may cause Google's servers to be contacted once, to download a recognition model — see Section 4. No app data is included in that request.</li>
+  </ul>
 
   <h2 id="retention">7. Data retention and deletion</h2>
   <p>
@@ -169,16 +198,19 @@
   <p>
     Job Nexia is a professional estimating tool for tradespeople and is
     not directed at children. We do not knowingly collect information from
-    anyone under 13. Because the app has no account and no network access,
-    it has no mechanism to identify or collect information about any user's
+    anyone under 13. Because the app has no account and no analytics, it
+    has no mechanism to identify or collect information about any user's
     age in the first place.
   </p>
 
   <h2 id="security">9. Security</h2>
   <p>
-    Because the app never transmits data, there is no data in transit to
-    protect. Data at rest is protected by your device's own operating-system
-    app sandboxing, the same as any other locally-stored app data.
+    Your project, bid, invoice, expense, income, and price-book data is
+    never transmitted, so there is no app data in transit to protect. The
+    two narrow network requests described in Section 4 (a pasted store URL,
+    a one-time OCR model download) use standard HTTPS and carry no app data.
+    Data at rest is protected by your device's own operating-system app
+    sandboxing, the same as any other locally-stored app data.
   </p>
 
   <h2 id="controls">10. User choices and controls</h2>
